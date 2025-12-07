@@ -5,9 +5,9 @@ import torch
 
 app = FastAPI()
 
-# Load the AI model (this happens once when the API starts)
+
 print("Loading Nova AI model...")
-model_name = "distilgpt2"  # Small, fast model
+model_name = "distilgpt2"  
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForCausalLM.from_pretrained(model_name)
 print("Model loaded!")
@@ -21,7 +21,7 @@ def read_root():
 
 @app.post("/chat")
 def chat(request: ChatRequest):
-    # Generate AI response
+  
     inputs = tokenizer.encode(request.message, return_tensors="pt")
     outputs = model.generate(
         inputs, 
