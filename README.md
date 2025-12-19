@@ -1,4 +1,4 @@
-# Nova Ai Model
+# Saturn Ai Model
 
 A custom AI chat model and API built from scratch.
 
