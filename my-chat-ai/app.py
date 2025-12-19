@@ -9,7 +9,7 @@ print("Loading Kova AI model...")
 
 
 
-model_name = "./models/Kova-Ai-model-beta"
+model_name = "./models/Saturn-Ai-model-beta"
 
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 tokenizer.pad_token = tokenizer.eos_token
